@@ -2,7 +2,7 @@
     Create a Trigger on the Account Object, to Prevent the Deletion of Related Contacts upon Deleting an Account Record.
  */
 
-trigger AccountConDelTrigger on Account (before delete,before update,after update ) 
+trigger AccountConDelTrigger on Account (before delete,before update ) 
 {
   if(trigger.isBefore && trigger.isDelete)
   {
